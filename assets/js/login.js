@@ -27,7 +27,7 @@ $(function () {
       password:$('#form-reg [name=passward').val()
     }
     // console.log(data);
-    $.post('http://api-breakingnews-web.itheima.net/api/reguser', data, function (req, res) {
+    $.post('/api/reguser', data, function (req, res) {
       if (res !== 'success') {
         console.log(res);
         return layer.msg(res)
@@ -46,7 +46,7 @@ $(function () {
       password:$('#form-login [name=passward').val()
     }
     $.ajax({
-      url: 'http://api-breakingnews-web.itheima.net/api/login',
+      url: '/api/login',
       method: 'post',
       data:data,
       success: function (res) {
