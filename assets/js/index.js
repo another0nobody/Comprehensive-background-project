@@ -16,12 +16,7 @@ $(function () {
       // 关闭询问框
       layer.close(index);
     });
-    //eg2
-    layer.confirm('确定要退出吗？', function(index){
-      //do something
-      
-      layer.close(index);
-    });
+    
   })
   
 })
@@ -41,7 +36,7 @@ function getUserInfo() {
 }
 // 渲染用户头像
 function renderAvater(user) {
-  let name = user.username || user.nickname
+  let name = user.nickname || user.username
 
   $('#welcome').html('欢迎&nbsp&nbsp' + name)
   // 欢迎 渲染
